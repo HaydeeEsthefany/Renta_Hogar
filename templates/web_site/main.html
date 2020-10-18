@@ -1,0 +1,437 @@
+{% extends 'web_site/layout.html' %}
+{% load static %}
+
+{% block container %}
+
+    <div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_1.jpg'%});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+            <h2 class="subheading">Bienvenido a Renta Hogar</h2>
+            <h1 class="mb-4">Alquile un apartamento para sus vacaciones</h1>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-book ftco-no-pt ftco-no-pb">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-lg-4">
+            <form  method="post" class="appointment-form">
+              <h3 class="mb-3">Reserve su apartamento</h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                     {{form.fullName}}
+                  </div>
+                    <div class=error>
+                        {% if form.fullName.errors %}
+                        <span class="error text-danger">                      
+                            {% for error in form.fullName.errors %}
+                              {{ error }}
+                            {% endfor %}
+                         </span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-wrap">
+                      <div class="icon"><span class="ion-md-calendar"></span></div>
+                      {{form.since}}
+                    </div>
+                    <div class=error>
+                        {% if form.since.errors %}
+                          <span class="error text-danger"> 
+                            {% for error in form.since.errors %}
+                              {{ error }}
+                            {% endfor %}
+                          </span>
+                        {% endif %}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-wrap">
+                      {{form.weeks}} 
+                    </div>
+                    <div class=error>
+                      <span class="error text-danger"> 
+                        {% if form.weeks.errors %}
+                            {% for error in form.weeks.errors %}
+                              {{ error }}
+                            {% endfor %}
+                        {% endif %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                       {{form.adult}}
+                      </div>
+                       <div class=error>
+                        {% if form.adult.errors %}
+                          <span class="error text-danger"> 
+                            {% for error in form.adult.errors %}
+                              {{ error }}
+                            {% endfor %}
+                          </span>
+                        {% endif %}
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                        {{form.children}}
+                      </div>
+                     <div class=error>
+                        {% if form.children.errors %}
+                          <span class="error text-danger"> 
+                            {% for error in form.children.errors %}
+                              {{ error }}
+                            {% endfor %}
+                          </span>
+                        {% endif %}
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    {{form.email}}
+                  </div>
+                   <div class=error>
+                      {% if form.email.errors %}
+                          <span class="error text-danger"> 
+                          {% for error in form.email.errors %}
+                            {{ error }}
+                          {% endfor %}
+                        </span>
+                      {% endif %}
+                  </div>
+                </div> 
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="submit" value="Reservar" class="btn btn-primary py-3 px-4">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section class="ftco-section ftco-services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+              <div class="img" style="background-image: url({% static 'images/services-1.jpg'%});"></div>
+              <div class="media-body py-4 px-3">
+                <h3 class="heading">Excelente Ubicación</h3>
+                <p>Ubicado cerca al centro de la ciudad pero alejado de los molestos ruidos de las avenidas principales</p>
+                <p><a href="#" class="btn btn-primary">Read more</a></p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+              <div class="img" style="background-image: url({% static 'images/services-2.jpg'%});"></div>
+              <div class="media-body py-4 px-3">
+                <h3 class="heading">Servicios de alojamiento</h3>
+                <p>Es como estar en tu propia casa, no se escuchan ruidos de los vecinos y se puede tener la paz que uno desea.</p>
+                <p><a href="#" class="btn btn-primary">Read more</a></p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+              <div class="img" style="background-image: url({% static 'images/services-3.jpg'%});"></div>
+              <div class="media-body py-4 px-3">
+                <h3 class="heading">Gran experiencia</h3>
+                <p>Pasa tiempo de calidad con las personas que amas. Para esos momentos inolvidables solo se necesita de unas pocas personas </p>
+                <p><a href="#" class="btn btn-primary">Read more</a></p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container-fluid px-md-0">
+        <div class="row no-gutters justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2>Habitaciones</h2>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img" style="background-image: url({% static 'images/room-1.jpg'%});"></a>
+              <div class="half left-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 3 personas</li>
+                    <li><span>Tamaño:</span> 45 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 1</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img" style="background-image: url({% static 'images/room-2.jpg'%});"></a>
+              <div class="half left-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">Habitación estándar</a></h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 3 Persons</li>
+                    <li><span>Tamaño:</span> 45 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 1</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img order-md-last" style="background-image: url({% static 'images/room-3.jpg'%});"></a>
+              <div class="half right-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">>Cuarto Familiar</h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 6 Persons</li>
+                    <li><span>Tamaño:</span> 90 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img order-md-last" style="background-image: url({% static 'images/room-4.jpg'%});"></a>
+              <div class="half right-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 3 Persons</li>
+                    <li><span>Tamaño:</span> 45 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 1</li>
+                  </ul>
+         
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2>Clientes felices  &amp; y comentarios</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({% static 'images/person_1.jpg'%})">
+                  </div>
+                  <div class="text pl-4">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="fa fa-quote-left"></i>
+                    </span>
+                    <p>Las mejores vacaciones!</p>
+                    <p class="name">Racky Henderson</p>
+                    <span class="position">Father</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({% static 'images/person_2.jpg'%})">
+                  </div>
+                  <div class="text pl-4">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="fa fa-quote-left"></i>
+                    </span>
+                    <p>Recomendadisimo.</p>
+                    <p class="name">Henry Dee</p>
+                    <span class="position">Businesswoman</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({% static 'images/person_3.jpg'%})">
+                  </div>
+                  <div class="text pl-4">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="fa fa-quote-left"></i>
+                    </span>
+                    <p>Las habitaciones son muy comodas.</p>
+                    <p class="name">Mark Huff</p>
+                    <span class="position">Businesswoman</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({% static 'images/person_4.jpg'%})">
+                  </div>
+                  <div class="text pl-4">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="fa fa-quote-left"></i>
+                    </span>
+                    <p>Las instalaciones estan en excelente estado.</p>
+                    <p class="name">Rodel Golez</p>
+                    <span class="position">Businesswoman</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({% static 'images/person_1.jpg'%})">
+                  </div>
+                  <div class="text pl-4">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="fa fa-quote-left"></i>
+                    </span>
+                    <p>Mis padres se divirtieron mucho.</p>
+                    <p class="name">Ken Bosh</p>
+                    <span class="position">Businesswoman</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-6 wrap-about">
+            <div class="img img-2 mb-4" style="background-image: url({% static 'images/about.jpg'%});">
+            </div>
+            
+          </div>
+          <div class="col-md-6 wrap-about ftco-animate">
+            <div class="heading-section">
+              <div class="pl-md-5">
+                <h2 class="mb-2">Lo que ofrecemos</h2>
+              </div>
+            </div>
+            <div class="pl-md-5">
+              <p>Para que tu estadia con nosotros sea más que unas simples vacaciones, sean un recuerdo para toda la vida.</p>
+              <div class="row">
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-diet"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Sala de Te</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-workout"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Agua Caliente</h3>
+                  </div>
+                </div>
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-diet-1"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Lavanderia</h3>
+                  </div>
+                </div>      
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Aire acondicionado</h3>
+                  </div>
+                </div>
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Wifi</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Cocina</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Planchado</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Amor</h3>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+ 
+  
+  {% endblock %}

@@ -1,0 +1,142 @@
+{% extends 'web_site/layout.html' %}
+{% load static %}
+
+  {% block container %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/bg_2.jpg'%});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="{% url 'welcome' %}">Inicio <i class="fa fa-chevron-right"></i></a></span> <span>Servicios <i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">Servicios</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section class="ftco-section ftco-services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+              <div class="img" style="background-image: url({% static 'images/services-1.jpg'%});"></div>
+              <div class="media-body py-4 px-3">
+                <h3 class="heading">Excelente Ubicación</h3>
+                <p>Ubicado cerca al centro de la ciudad pero alejado de los molestos ruidos de las avenidas principales</p>
+                <p><a href="#" class="btn btn-primary">Read more</a></p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+              <div class="img" style="background-image: url({% static 'images/services-2.jpg'%});"></div>
+              <div class="media-body py-4 px-3">
+                <h3 class="heading">Servicios de alojamiento</h3>
+                <p>Es como estar en tu propia casa, no se escuchan ruidos de los vecinos y se puede tener la paz que uno desea.</p>
+                <p><a href="#" class="btn btn-primary">Read more</a></p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+              <div class="img" style="background-image: url({% static 'images/services-3.jpg'%});"></div>
+              <div class="media-body py-4 px-3">
+                <h3 class="heading">Gran experiencia</h3>
+                <p>Pasa tiempo de calidad con las personas que amas. Para esos momentos inolvidables solo se necesita de unas pocas personas </p>
+                <p><a href="#" class="btn btn-primary">Read more</a></p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-6 wrap-about">
+            <div class="img img-2 mb-4" style="background-image: url({% static 'images/about.jpg'%});">
+            </div>
+            
+          </div>
+          <div class="col-md-6 wrap-about ftco-animate">
+            <div class="heading-section">
+              <div class="pl-md-5">
+                <h2 class="mb-2">Lo que ofrecemos</h2>
+              </div>
+            </div>
+            <div class="pl-md-5">
+              <p>Para que tu estadia con nosotros sea más que unas simples vacaciones, sean un recuerdo para toda la vida.</p>
+              <div class="row">
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-diet"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Sala de Te</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-workout"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Agua Caliente</h3>
+                  </div>
+                </div>
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-diet-1"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Lavanderia</h3>
+                  </div>
+                </div>      
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Aire acondicionado</h3>
+                  </div>
+                </div>
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Wifi</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Cocina</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Planchado</h3>
+                  </div>
+                </div> 
+                <div class="services-2 col-lg-6 d-flex w-100">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="flaticon-first"></span>
+                  </div>
+                  <div class="media-body pl-3">
+                    <h3 class="heading">Amor</h3>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'web_site/layout.html' %}
+{% load static %}
+  {% block container %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/rooms.jpg'%});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="{% url 'welcome' %}">Inicio <i class="fa fa-chevron-right"></i></a></span> <span>Habitaciones <i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">Habitaciones</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section class="ftco-section bg-light">
+      <div class="container-fluid px-md-0"> 
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img" style="background-image: url({% static 'images/room-1.jpg'%});"></a>
+              <div class="half left-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 3 personas</li>
+                    <li><span>Tamaño:</span> 45 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 1</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img" style="background-image: url({% static 'images/room-2.jpg'%});"></a>
+              <div class="half left-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">Habitación estándar</a></h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 3 Persons</li>
+                    <li><span>Tamaño:</span> 45 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 1</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img order-md-last" style="background-image: url({% static 'images/room-3.jpg'%});"></a>
+              <div class="half right-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">>Cuarto Familiar</h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 6 Persons</li>
+                    <li><span>Tamaño:</span> 90 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="room-wrap d-md-flex">
+              <a href="#" class="img order-md-last" style="background-image: url({% static 'images/room-4.jpg'%});"></a>
+              <div class="half right-arrow d-flex align-items-center">
+                <div class="text p-4 p-xl-5 text-center">
+                  <p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                  <!-- <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p> -->
+                  <h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
+                  <ul class="list-accomodation">
+                    <li><span>Max:</span> 3 Persons</li>
+                    <li><span>Tamaño:</span> 45 m2</li>
+                    <li><span>Vista:</span> Sea View</li>
+                    <li><span>Cama:</span> 1</li>
+                  </ul>
+         
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% endblock %}

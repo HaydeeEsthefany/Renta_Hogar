@@ -1,0 +1,2 @@
+token =''
+language = 'Español'
