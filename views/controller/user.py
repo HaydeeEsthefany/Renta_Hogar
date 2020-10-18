@@ -17,7 +17,12 @@ def welcome(request):
     if request.method == 'POST' :
         form = RegisterForm(request.POST)
         if form.is_valid():       
-            user = post_send_email_verify(getClientIp(request),form.cleaned_data['fullName'] ,form.cleaned_data['since'] ,form.cleaned_data['weeks'] ,
+            since=form.cleaned_data['since']
+
+            date_object = datetime.strptime(since, '%d/%m/%Y')
+
+            fecha_str = datetime.strftime(date_object, '%Y/%m/%d')
+            user = post_send_email_verify(getClientIp(request),form.cleaned_data['fullName'] ,fecha_str ,form.cleaned_data['weeks'] ,
                                     form.cleaned_data['adult'] , form.cleaned_data['children'] ,
                                      form.cleaned_data['email'] )        
             if user['success'] == True:    
