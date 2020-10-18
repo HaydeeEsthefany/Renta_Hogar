@@ -34,9 +34,10 @@ def post_send_email_verify(dir_ip,fullname, since, weeks , adult ,  children , e
 
 
 def get_capture(fullname):    
-    url = web() + 'capture/image/?full_name='+str(fullname) 
+    url = web() + 'capture/image/'
     args = {'full_name':fullname}
     response = generate_request_post(url,args)  
     print(url)
+    print(args)
  
     return True
