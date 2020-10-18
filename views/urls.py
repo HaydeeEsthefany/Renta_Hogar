@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .controller import user
+from .controller import user, biometric
 
 urlpatterns = [
 
@@ -10,6 +10,12 @@ urlpatterns = [
     url(r'^contact/$',                                                          user.contact,      name='contact'),
     url(r'^rooms/$',                                                            user.rooms,      name='rooms'),
     url(r'^services/$',                                                         user.services,      name='services'),
+
+
+
+
+    url(r'^capture/$',                                                         biometric.capture,      name='capture'),
+
 
 
 ]

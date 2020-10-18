@@ -3,6 +3,10 @@ from django.forms import ValidationError
 
 from datetime import datetime
 
+class RegistrarFotos(forms.Form):
+    fullName  = forms.CharField(label="Nombre Completo",widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nombre Completo'}),  min_length=4, max_length=50)
+   
+ 
 
         
         

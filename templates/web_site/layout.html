@@ -32,7 +32,37 @@
                   </div>
               </div>
             </div>
-          </div>          
+          </div>        
+
+
+          
+          {% if messages %}
+             {% for message in messages %}
+                <div class="modal active" id=myModal>
+                    <div class="modal-content">
+                        <header>
+                            <h2>Mensaje</h2>
+                            <button class="close-modal"><i class="icon-close"></i></button>
+                        </header>
+                        <div class="content">
+                            <h3>{{ message }}</h3>
+                            <div class="success">
+                                <span class="icon-line line-tip"></span>
+                                <span class="icon-line line-long"></span>
+                                <div class="icon-circle"></div>
+                                <div class="icon-fix"></div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="overlay"></div>
+                </div>   
+           {% endfor %}
+           {% endif %}
+
+
+       
+  
+  
           <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
               <a class="navbar-brand" href="index.html">Renta<span>Hogar</span></a>
@@ -110,38 +140,6 @@
 
 
 
-    <main class=p-dashboard> 
-        <section>
-          {% if messages %}
-             {% for message in messages %}
-                <div class="modal active" id=myModal>
-                    <div class="modal-content">
-                        <header>
-                            <h2>Mensaje</h2>
-                            <button class="close-modal"><i class="icon-close"></i></button>
-                        </header>
-                        <div class="content">
-                            <h3>{{ message }}</h3>
-                            <div class="success">
-                                <span class="icon-line line-tip"></span>
-                                <span class="icon-line line-long"></span>
-                                <div class="icon-circle"></div>
-                                <div class="icon-fix"></div>
-                            </div>
-                        </div>
-                    </div>
-                   <div class="overlay"></div>
-                </div>   
-           {% endfor %}
-           {% endif %}
-
-
-       
-        </section>            
-
-
-    </main>  
-  
 
 
   </html>
