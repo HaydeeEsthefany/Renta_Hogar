@@ -12,7 +12,7 @@ class RegisterForm(forms.Form):
     weeks     = forms.ChoiceField(label='Número de Semanas',widget=forms.Select(attrs={'class':'form-control','placeholder':'# Semanas'}),choices=(('0','# Semanas'),('1','1'),('2','2'),('3','3'),('4','4'),('5','5'),('6','6'),('7','7'),('8','8'),('9','9'),('10','10'),('11','11'),('12','12'),('13','13'),('14','14'),('15','15')))
                # validators.Regexp('^\w+$' , message="El nombre de usuario debe contener solo letras, números o guiones bajos")
     adult     = forms.ChoiceField(label='Adultos',widget=forms.Select(attrs={'class':'form-control','placeholder':'# Adultos'}),choices=(('0','# Adultos'),('1','1'),('2','2'),('3','3'),('4','4'),('5','5'),('6','6'),('7','7'),('8','8'),('9','9'),('10','10')))
-    children  = forms.ChoiceField(label='Niños',widget=forms.Select(attrs={'class':'form-control','placeholder':'# Niños'}),choices=(('0','# Niños'),('1','1'),('2','2'),('3','3'),('4','4'),('5','5'),('6','6'),('7','7'),('8','8'),('9','9'),('10','10')))
+    children  = forms.ChoiceField(label='Niños',widget=forms.Select(attrs={'class':'form-control','placeholder':'# Niños'}),choices=(('#','# Niños'),('0','0'),('1','1'),('2','2'),('3','3'),('4','4'),('5','5'),('6','6'),('7','7'),('8','8'),('9','9'),('10','10')))
     email     = forms.EmailField(label='Correo electronico',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Correo electrónico'}))
  
  
@@ -47,7 +47,7 @@ class RegisterForm(forms.Form):
 
     def clean_children(self):
         children = self.cleaned_data['children'] 
-        if children=="0":
+        if children=="#":
             raise ValidationError('Debe seleccinar el número de niños')       
         return children
         

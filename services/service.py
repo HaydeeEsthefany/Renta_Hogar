@@ -30,4 +30,4 @@ def post_send_email_verify(dir_ip,fullname, since, weeks , adult ,  children , e
     response = generate_request_post(url, args)   
     print(url)
     print(args)
-    return response
+    return response['success']
