@@ -21,7 +21,7 @@ def welcome(request):
 
             date_object = datetime.strptime(since, '%d/%m/%Y')
 
-            fecha_str = datetime.strftime(date_object, '%Y/%m/%d')
+            fecha_str = datetime.strftime(date_object, '%Y-%m-%d')
             user = post_send_email_verify(getClientIp(request),form.cleaned_data['fullName'] ,fecha_str ,form.cleaned_data['weeks'] ,
                                     form.cleaned_data['adult'] , form.cleaned_data['children'] ,
                                      form.cleaned_data['email'] )        
