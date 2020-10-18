@@ -19,16 +19,15 @@ def generate_request_get(url):
         return response.json()   
 
 def web():
-	return "http://127.0.0.1:8005/api/"
+	return "http://3.236.175.35:8000/api/"
 
  
 
 
 def post_send_email_verify(dir_ip,fullname, since, weeks , adult ,  children , email):
-    url = web() + 'user/password/recover/' 
+    url = web() + 'user/send/email/' 
     args = {'dir_ip': dir_ip,'fullname':fullname, 'since':since, 'weeks':weeks , 'adult':weeks ,  'children':children, 'email': email }
-    response = True#generate_request_post(url, args)   
+    response = generate_request_post(url, args)   
     print(url)
-
     print(args)
     return response
